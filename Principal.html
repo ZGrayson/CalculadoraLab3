@@ -1,0 +1,101 @@
+<!--
+ * Ejercicio: Formulario con conexion a base de datos
+ * @author: Diaz García Zyanya Paola
+ * @author: Rodriguez de la Mora Elizabeth Dayanne 
+ * @version:  1.0 
+ -->
+ <windowtitle>Formulario</windowtitle>
+<html>
+    <head>
+        <title>Formulario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>    
+            //Funcion que evita que se queden campos vacios en el formulario
+        function Verifica(boton)
+            {
+               var nombres=document.getElementById("Nombre");
+               var apellidos=document.getElementById("ApellidoP");
+               var apellidos2=document.getElementById("ApellidoM");
+               var esc=document.getElementById("Escuela");
+                   
+                if (nombres.value === "")
+                    { alert("Teclea tu nombre");
+                      Nombre.focus();
+                      return false;
+                    }
+                if (apellidos.value === "")
+                    { alert("Teclea tu apellido paterno");
+                      Domicilio.focus();  
+                      return false;
+                    }
+                        
+                if (apellidos2.value === "")
+                {
+                    alert("Teclea tu apellido materno");
+                    return false;
+                }
+                if (esc.value === "")
+                {
+                    alert("Teclea el nombre de tu escuela");
+                    return false;
+                }        
+                
+                Ocultar();  
+                alert("Datos completos");
+            }
+            
+            //Deshabilita el boton de verificado una vez este lleno el formulario
+            function Ocultar()
+            {
+              document.getElementById('boton1').disabled=true;
+              Mostrar();
+            }
+            
+            //Habilita el boton que envia los datos a la base
+            function Mostrar()
+            {
+              document.getElementById('boton2').disabled=false;
+            }
+         
+        </script>
+    </head>
+    <body>
+        <!-- Construcción del formulario-->
+         <form  action="altas.jsp" name="formulario" method="post">
+         <div style="display: table; width: 100%;height: 100%;">
+         
+            <div style="float:left;width:100%;height: 10%;background-color: purple;">
+                <center><font face="Arial" color="white" size="10">Formulario básico de datos</font></center>
+            </div>
+             
+            <div style="float:left;width:100%;height:90%;background-color: hotpink;">
+               
+                    
+                    <font face="Arial" color="black" size="3">
+                    <br><br>
+                    &nbsp;&nbsp;<b>Nombre:</b>
+                    &nbsp;&nbsp;<INPUT TYPE="text" name="Nombre" id="Nombre"> 
+                    <br><br>
+                    &nbsp;&nbsp;<b>Apellido paterno:</b>
+                    &nbsp;&nbsp;<INPUT TYPE="text" name="apellidop" id="ApellidoP"> 
+                    <br><br>
+                    &nbsp;&nbsp;<b>Apellido materno:</b>
+                    &nbsp;&nbsp;<INPUT TYPE="text" name="apellidom" id="ApellidoM"> 
+                    <br><br>
+                    &nbsp;&nbsp;<b>Escuela:</b>
+                    &nbsp;&nbsp;<INPUT TYPE="text" name="escuela" id="Escuela"> 
+                    <br><br><br>
+                    </font>
+                     <center>
+                        <input type="button" onclick="Verifica()" value="Verificar datos" id='boton1'>
+                        <input type="submit" name='Enviar' value='Enviar datos' id='boton2' disabled="true">
+                    </center>
+               
+            </div>
+            
+        </div>
+              </form>
+    </body>
+</html>
+
