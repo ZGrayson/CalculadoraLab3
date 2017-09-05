@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+    Inicio de sesión página de inicio
+    Created on : 5/09/2017
+    @author : Díaz García Zyanya Paola
+    @author : Rodriguez de la Mora
+    @version: 1.0
+-->
+<html>
+    <head>
+        <title>Menu</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="EstiloB.css">
+        <!--Se llama un JSP donde se piden los datos-->
+        <script src="js.js"></script>
+    </head>
+         <!--Contrucción del Login en HTML-->
+    <body background="fondo.jpg">
+        <!-- Form para recibir y enviar los datos al servlet -->
+        <form action="Ingresa" method="post">
+            <center> <br><br><br>
+            <font face="Monotype Corsiva" color="darkblue" size="10">Usuario:&nbsp;  </font>
+            <br>
+           <input type="text" style="width:400px; height:30px;" name="usuario">
+           <br><br>
+           <font face="Monotype Corsiva" color="darkblue" size="10">Contraseña:&nbsp;  </font>
+           <br>
+           <input type="password" style="width:400px; height:30px;" name="clave">
+           <br><br><br>
+           <input type="submit" value="Iniciar sesión" name="inicio" id="boton1">
+            </center>
+         </form>
+            <br><br>
+            <!-- Form que dirige al menu de altas -->
+        <form  action="Alta.jsp" method="post">
+            <center>
+           <input type="submit" name="registro" value="Registro" id="boton2">
+            </center>
+         </form>
+    </body>
+</html>
+
+

@@ -1,0 +1,48 @@
+/*
+    Hoja de formato para los botones
+    Created on : 5/09/2017
+    @author : Díaz García Zyanya Paola
+    @author : Rodriguez de la Mora
+    @version: 1.0
+*/
+#boton1
+    {
+      outline: none;
+      border: 1px solid #363431;
+      color: white;
+      width:200px;
+      height:50px;
+      font-size: 1.6em;
+      text-shadow: 0px -1px 1px black;
+      border-radius: 3vh 3vh 3vh 3vh;
+      cursor: pointer;
+      font-family: Monotype Corsiva;
+      background-color: cadetblue;              
+    }
+    #boton1:hover
+    {
+       box-shadow: 0px 0px 14px whitesmoke;
+       background-color: darkseagreen; 
+       
+    }
+
+#boton2
+    {
+      outline: none;
+      border: 1px solid #363431;
+      color: white;
+      width:150px;
+      height:50px;
+      font-size: 1.6em;
+      text-shadow: 0px -1px 1px black;
+      border-radius: 3vh 3vh 3vh 3vh;
+      cursor: pointer;
+      font-family: Monotype Corsiva;
+      background-color: cadetblue;              
+    }
+    #boton2:hover
+    {
+       box-shadow: 0px 0px 14px whitesmoke;
+       background-color: darkkhaki; 
+       
+    }
